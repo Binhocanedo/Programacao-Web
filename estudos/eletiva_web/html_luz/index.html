@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Lampada</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function ligarDesliga(){
+
+            var imagem = document.getElementById('lamp').src;
+            var imagem_ligado = 'imagens/lampadaAcessa.jpg';
+            var imagem_desligado = 'imagens/lampadaOff.jpg';
+
+            if(imagem.includes(imagem_ligado)){
+                document.getElementById('lamp').src = imagem_desligado;
+            }else{
+                document.getElementById('lamp').src = imagem_ligado;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Tarefa 04</h1>
+    <p>Tarefa cujo o intuito é acender e apagar uma lampada usando JavaScript</p>
+    <img id="lamp" src="imagens/lampadaOff.jpg" onclick="ligarDesliga()">
+</body>
+</html>
